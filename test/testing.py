@@ -21,6 +21,10 @@ def test_dropdown(driver):
     dropdown.select_by_visible_text("Option2")
     assert dropdown.first_selected_option.text == "Option2"
 
+def test_dropdown(driver):
+    dropdown = Select(driver.find_element(By.ID, "dropdown-class-example"))
+    dropdown.select_by_visible_text("Option2")
+    assert dropdown.first_selected_option.text == "Option3"
 
 def test_checkbox(driver):
     checkbox = driver.find_element(By.XPATH, "//input[@value='option1']")
